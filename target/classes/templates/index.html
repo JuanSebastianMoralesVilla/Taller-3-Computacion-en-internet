@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="../css/shards.min.css">
+</head>
+<body>
+	<div th:switch="${apps}" class="container my-5">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 th:case="null">MARKETPLACE COMPUNET !</h2>
+				
+				<p><a href="/templatesProduct/"><i class="fas fa-solid fa-cart-plus ml-2"></i> IR A PRODUCTOS</a></p>
+				<p><a href="/templatesLocation/"><i class="fas fa-solid fa-map ml-2"></i> IR A UBICACION</a></p>
+			    <p><a href="/templatesProductCostHistoric/"><i class="fas fa-solid fa-chart-line ml-2"></i> IR AL COSTO HISTORICO DE PRODUCTO</a></p>
+			    <p><a href="/templatesProductInventory/"><i class="fas fa-solid fa-box ml-2"></i> IR AL INVENTARIO DE PRODUCTO</a></p>
+			 
+		        <p><a href="/logout"><i class="fas fa-sign-out-alt ml-2"></i> CERRAR SESION </a></p>
+		        
+			</div>
+		</div>
+	</div>
+</body>
+</html>
